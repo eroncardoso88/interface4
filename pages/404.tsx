@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useStyleContext } from "contexts/Style";
 import { fakeApi } from "fakeapi";
 import { getStaticProps } from "next";
+import Header from "components/Header";
 
 export async function getStaticProps() {
   const res = await fakeApi.getStyles();
@@ -14,7 +15,11 @@ export async function getStaticProps() {
   };
 }
 
-const FourHundred: NextPage = ({style}) => {
+interface IFourHundred {
+  style: unknown
+}
+
+const FourHundred: NextPage = ({style}: IFourHundred) => {
   // const { context } = useStyleContext()
   useEffect(async () => {
     console.log('eron props', style)
@@ -22,6 +27,10 @@ const FourHundred: NextPage = ({style}) => {
 
   return (
     <>
+          <main className="leading-normal tracking-normal text-red-400 bg-black h-screen">
+      <div className="h-full">
+      <Header />
+
       <h3 className="text-gray-500">
       </h3>
       {/* Main */}
@@ -121,6 +130,8 @@ const FourHundred: NextPage = ({style}) => {
           </a>
         </div>
       </div>
+      </div>
+    </main>
     </>
   );
 };
