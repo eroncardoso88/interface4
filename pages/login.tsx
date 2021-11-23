@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import Header from "components/Header";
+import { relative } from "path/posix";
 
 const Home: NextPage = () => {
   const [passwordRecovery, setPasswordRecovery] = useState(false);
@@ -22,15 +23,15 @@ const Home: NextPage = () => {
               {!passwordRecovery && (
                 <form className="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
                   <div className="mb-4">
-                  <div className="chakra-input__group css-4302v8">
-                      <div className="chakra-input__left-element css-j7bzn4">
+                  <div className="css-4302v8" >
+                      <div className="css-j7bzn4" style={{ position: 'relative', top: '18px', zIndex: '1', width: 0, height: 0}}>
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
                         strokeWidth="0"
                         viewBox="0 0 24 24"
                         focusable="false"
-                        className="chakra-icon css-13otjrl"
+                        className=""
                         height="1em"
                         width="1em"
                         xmlns="http://www.w3.org/2000/svg"
