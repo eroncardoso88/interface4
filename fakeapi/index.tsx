@@ -1,4 +1,4 @@
-function teste() {
+export function fakeApi() {
     const getStyles = () => new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve({
@@ -44,5 +44,3 @@ function teste() {
         getContent
     }
 }
-const fakeApi = new teste()
-export {fakeApi}

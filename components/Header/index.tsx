@@ -1,6 +1,18 @@
-import type { NextPage } from "next";
 
-const Home: NextPage = () => {
+// import { IStyle } from 'types/theme'
+import { fakeApi } from 'fakeapi'
+import { useEffect, FunctionComponent } from "react";
+import {IStyle} from 'types/theme'
+
+interface IHeader {
+  style: IStyle;
+}
+
+const Header: FunctionComponent<IHeader> = (style: IStyle) => {
+  useEffect(async () => {
+    console.log("eron props header", style);
+  }, []);
+
   return (
     <>
       <div className="w-full container mx-auto">
@@ -46,4 +58,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Header;
