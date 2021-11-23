@@ -1,7 +1,4 @@
 function teste() {
-    // function getStyles() {
-    //     return 'oie'
-    // }
     const getStyles = () => new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve({
