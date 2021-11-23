@@ -14,9 +14,36 @@ export async function getStaticProps() {
     },
   };
 }
-
 interface IFourHundred {
-  style: unknown;
+  style: IStyle;
+}
+
+interface IStyle {
+  backgroundColor: string;
+  backgroundGradientDegree: string;
+  backgroundGradientFirst: string;
+  backgroundGradientSecond: string;
+  backgroundImageUrl: string;
+  backgroundType: string;
+  bannerUrl: string;
+  borderRadius: string;
+  createdAt: string;
+  description: string;
+  faviconUrl: string;
+  footer: string;
+  inputColor: string;
+  keywords: string;
+  logoUrl: string;
+  platformId: string;
+  platformName: string;
+  primaryColor: string;
+  secondaryColor: string;
+  supportEmail: string;
+  supportNumber: string;
+  tertiaryColor: string;
+  textColor: string;
+  title: string;
+  updatedAt: string;
 }
 
 const FourHundred: NextPage = ({ style }: IFourHundred) => {
@@ -24,26 +51,58 @@ const FourHundred: NextPage = ({ style }: IFourHundred) => {
   useEffect(async () => {
     console.log("eron props", style);
   }, []);
-
+  const {  
+    backgroundColor,
+    backgroundGradientDegree,
+    backgroundGradientFirst,
+    backgroundGradientSecond,
+    backgroundImageUrl,
+    backgroundType,
+    bannerUrl,
+    borderRadius,
+    createdAt,
+    description,
+    faviconUrl,
+    footer,
+    inputColor,
+    keywords,
+    logoUrl,
+    platformId,
+    platformName,
+    primaryColor,
+    secondaryColor,
+    supportEmail,
+    supportNumber,
+    tertiaryColor,
+    textColor,
+    title,
+    updatedAt } = style
   return (
     <>
-      <main className="leading-normal tracking-normal text-red-400 bg-black h-screen">
+      <main
+        className="leading-normal tracking-normal h-screen"
+        style={{backgroundColor}}
+      >
         <div className="h-full">
           <Header />
-
-          <h3 className="text-gray-500"></h3>
           {/* Main */}
           <div className="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
             {/* Left Col */}
             <div className="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-              <h1 className="my-4 text-3xl md:text-5xl text-white opacity-75 font-bold leading-tight text-center md:text-left">
+              <h1 className="my-4 text-3xl md:text-5xl opacity-75 font-bold leading-tight text-center md:text-left"
+              style={{color: primaryColor}}
+              >
                 Não encontrado
               </h1>
-              <p className="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">
+              <p className="leading-normal text-base md:text-2xl mb-8 text-center md:text-left"
+              style={{color: secondaryColor}}
+              >
                 404
               </p>
 
-              <form className="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
+              <form className="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4"
+              style={{backgroundColor: tertiaryColor}}
+              >
                 <div className="mb-4">
                   <label
                     className="block text-gray-500 py-2 font-bold mb-2"
