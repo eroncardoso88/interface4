@@ -2,17 +2,41 @@
 // import { IStyle } from 'types/theme'
 import { fakeApi } from 'fakeapi'
 import { useEffect, FunctionComponent } from "react";
-import {IStyle} from 'types/theme'
+import { IStyle } from 'types/theme'
 
 interface IHeader {
   style: IStyle;
 }
 
 const Header: FunctionComponent<IHeader> = (style: IStyle) => {
-  useEffect(async () => {
-    console.log("eron props header", style);
-  }, []);
 
+  const {  
+    backgroundColor,
+    backgroundGradientDegree,
+    backgroundGradientFirst,
+    backgroundGradientSecond,
+    backgroundImageUrl,
+    backgroundType,
+    bannerUrl,
+    borderRadius,
+    createdAt,
+    description,
+    faviconUrl,
+    footer,
+    inputColor,
+    keywords,
+    logoUrl,
+    platformId,
+    platformName,
+    primaryColor,
+    secondaryColor,
+    supportEmail,
+    supportNumber,
+    tertiaryColor,
+    textColor,
+    title,
+    updatedAt } = style
+  
   return (
     <>
       <div className="w-full container mx-auto">
@@ -22,7 +46,7 @@ const Header: FunctionComponent<IHeader> = (style: IStyle) => {
             className="flex items-center text-red-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
             href="#"
           >
-            Template<span className="bg-clip-text text-red-500 ml-1">4</span>
+            <img src={logoUrl} alt="" className="src" style={{minHeight: '65px'}} />
           </a>
           <div className="flex w-1/2 justify-end content-center">
             <a

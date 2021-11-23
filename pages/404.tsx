@@ -1,14 +1,12 @@
 import type { NextPage } from "next";
-import { useEffect } from "react";
-import { useStyleContext } from "contexts/Style";
 import { fakeApi } from "fakeapi";
 import { getStaticProps } from "next";
 import Header from "components/Header";
+import { IStyle } from 'types/theme'
 
 export async function getStaticProps() {
   const apiCall = new fakeApi()
   const res = await apiCall.getStyles();
-
   return {
     props: {
       style: res,
@@ -20,38 +18,7 @@ interface IFourHundred {
   style: IStyle;
 }
 
-interface IStyle {
-  backgroundColor: string;
-  backgroundGradientDegree: string;
-  backgroundGradientFirst: string;
-  backgroundGradientSecond: string;
-  backgroundImageUrl: string;
-  backgroundType: string;
-  bannerUrl: string;
-  borderRadius: string;
-  createdAt: string;
-  description: string;
-  faviconUrl: string;
-  footer: string;
-  inputColor: string;
-  keywords: string;
-  logoUrl: string;
-  platformId: string;
-  platformName: string;
-  primaryColor: string;
-  secondaryColor: string;
-  supportEmail: string;
-  supportNumber: string;
-  tertiaryColor: string;
-  textColor: string;
-  title: string;
-  updatedAt: string;
-}
-
 const FourHundred: NextPage = ({ style }: IFourHundred) => {
-  useEffect(async () => {
-    console.log("eron props", style);
-  }, []);
   const {  
     backgroundColor,
     backgroundGradientDegree,
