@@ -22,38 +22,55 @@ const Home: NextPage = () => {
               {!passwordRecovery && (
                 <form className="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
                   <div className="mb-4">
-                  <div className="chakra-input__group css-4302v8">
+                    <div className="chakra-input__group css-4302v8">
                       <div className="chakra-input__left-element css-j7bzn4">
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 24 24"
-                        focusable="false"
-                        className="chakra-icon css-13otjrl"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
-                      </svg>
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 24 24"
+                          focusable="false"
+                          className="chakra-icon css-13otjrl"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                        </svg>
                       </div>
-                    <input
-                      className="shadow appearance-none border rounded w-full p-3 text-gray-500 font-bold leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                      id="emailaddress"
-                      type="text"
-                      placeholder="Email"
-                      required
-                    />
+                      <input
+                        className="shadow appearance-none border rounded w-full p-3 text-gray-500 font-bold leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                        id="emailaddress"
+                        type="text"
+                        placeholder="Email"
+                        required
+                      />
                     </div>
                   </div>
                   <div className="mb-4">
-                    <input
-                      className="shadow appearance-none border rounded w-full p-3 text-gray-500 font-bold leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                      id="password"
-                      type="password"
-                      placeholder="Senha"
-                    />
+                    <div className="chakra-input__group css-a0kk5w">
+                      <div className="chakra-input__left-element css-j7bzn4">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 24 24"
+                          focusable="false"
+                          className="chakra-icon css-13otjrl"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"></path>
+                        </svg>
+                      </div>
+                      <input
+                        className="shadow appearance-none border rounded w-full p-3 text-gray-500 font-bold leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                        id="password"
+                        type="password"
+                        placeholder="Senha"
+                      />
+                    </div>
                   </div>
 
                   <div className="flex items-center justify-between pt-4">
@@ -66,7 +83,6 @@ const Home: NextPage = () => {
                   </div>
                 </form>
               )}
-
             </div>
 
             {/* Footer */}
