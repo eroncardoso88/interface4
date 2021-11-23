@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import Header from "components/Header";
+import { relative } from "path/posix";
 
 const Home: NextPage = () => {
   const [passwordRecovery, setPasswordRecovery] = useState(false);
@@ -22,21 +23,21 @@ const Home: NextPage = () => {
               {!passwordRecovery && (
                 <form className="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
                   <div className="mb-4">
-                    <div className="chakra-input__group css-4302v8">
-                      <div className="chakra-input__left-element css-j7bzn4">
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          strokeWidth="0"
-                          viewBox="0 0 24 24"
-                          focusable="false"
-                          className="chakra-icon css-13otjrl"
-                          height="1em"
-                          width="1em"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
-                        </svg>
+                  <div className="css-4302v8" >
+                      <div className="css-j7bzn4" style={{ position: 'relative', top: '18px', zIndex: '1', width: 0, height: 0}}>
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth="0"
+                        viewBox="0 0 24 24"
+                        focusable="false"
+                        className=""
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                      </svg>
                       </div>
                       <input
                         className="shadow appearance-none border rounded w-full p-3 text-gray-500 font-bold leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
